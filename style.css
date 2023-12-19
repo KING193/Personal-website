@@ -7,6 +7,29 @@
     scroll-behavior: smooth;
 }
 
+.channel-img {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+}
+
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #171617; 
+}
+
+::-webkit-scrollbar-thumb {
+    background: chartreuse;
+    border-radius: 50px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: yellow; 
+}
+
 header {
     background-color: #0f0e0e;
     width: 100%;
@@ -24,10 +47,9 @@ header {
     text-transform: uppercase;
     font-weight: 700;
     font-size: 1.8em;
-    cursor: no-drop;
 }
 
-.navigation a {
+.navigation a , .mobile-nav{
     text-decoration: none;
     color: chartreuse;
     font-size: 1.1em;
@@ -42,7 +64,88 @@ header {
 section {
     padding: 100px 200px;
 }
+/*  */
+.hamburger {
+    position: relative;
+    display: block;
+    width: 35px;
+    cursor: pointer;
+    appearance: none;
+    background: none;
+    outline: none;
+    border: none;
+}
 
+.hamburger .bar, .hamburger::after, .hamburger::before{
+    content: '';
+    display: block;
+    width: 100%;
+    height: 5px;
+    background-color: chartreuse;
+    margin: 6px;
+    transition: 0.4s;
+}
+
+.hamburger.is-active::before {
+    transform: rotate(-45deg) translate(-8px, 6px);
+}
+
+.hamburger.is-active::after {
+    transform: rotate(45deg) translate(-9px, -8px);
+}
+
+.hamburger.is-active .bar {
+    opacity: 0;
+}
+
+.mobile-nav {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 100%;
+    min-height: 100vh;
+    display: block;
+    z-index: 98;
+    background-color: #0f0e0e;
+    padding-top: 120px;
+    transition: 0.4s;
+}
+
+.mobile-nav.is-active {
+    left: 18%;
+}
+
+.mobile-nav a {
+    display: block;
+    width: 100%;
+    max-width: 1000px;
+    margin: 0 auto 16px;
+    text-align: center;
+    padding: 12px 16px;
+    background-color: #302e33;
+
+    color: chartreuse;
+    text-decoration: none;
+
+}
+
+.mobile-nav a:hover {
+    background-color: #171617;
+}
+
+@media (min-width:768px){
+
+
+    .mobile-nav {
+        display: none;
+    }
+
+    .hamburger {
+        display: none;
+    }
+}
+
+/*  */
 .main {
     width: 100%;
     min-height: 100vh;
@@ -267,7 +370,7 @@ section {
 }
 
 #e {
-    color: chartreuse
+    color: #fff;
 }
 
 .foot-p span {
@@ -279,13 +382,18 @@ section {
     padding: 0 12px 0 0;
 }
 
+@media (max-width:768px){
+    
+    .navigation a{
+        padding-left: 10px;
+        display: none;
+    }
+
+}
+
 @media (max-width:1023px){
     header{
         padding: 12px 20px;
-    }
-
-    .navigation a{
-        padding-left: 10px;
     }
 
     .title{
