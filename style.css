@@ -463,6 +463,10 @@ section {
         font-size: 10px;
     }
 
+    .main{
+        font-size: 1.04em;
+    }
+
     .main-content h2{
         font-size: 0.8em;
     }
@@ -485,7 +489,7 @@ section {
     }
 
     section {
-        padding: 50px 14px;
+        padding: 50px 7px;
     }
 
     .main-content h2{
@@ -512,16 +516,16 @@ section {
     .info p {
         margin-left: -10px;
     }
+
+    .main-btn{
+        margin-bottom: 20px;
+    }
 }
 
 @media (max-width: 283px){
     
     .main h2 span {
         font-size: 2.2em;
-    }
-
-    .contact {
-
     }
 
     .projects .project-card {
@@ -571,4 +575,93 @@ section {
     .foot-p {
         font-size: 0.8em;
     }
+}
+
+@media (max-width: 335px){
+    .footer{
+        padding: 10px;
+    }
+}
+
+@media (max-width: 289px){
+    
+    .projects{
+        padding: 50px 0 50 0;
+    }
+
+}
+
+@media (max-width: 282px){
+    .footer{
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 271px){
+    .footer .social-icons{
+        width: 60px;
+    }
+    
+    .footer .social-icons a{
+        padding-right: 15px;
+    }
+    #contact{
+        padding-left: 0;
+    }
+
+    #contact{
+        padding-right: 0;
+    }
+}
+
+@media (max-width: 241px){
+
+    .content{
+        font-size: 9px;
+    }
+
+}
+
+@media (max-width: 224px){
+
+    .main div{
+        font-size: 8px;
+    }
+
+    .social-icons a{
+        padding-right: 6px;
+    }
+
+    .content{
+        font-size: 7px;
+    }
+
+}
+
+@media (max-width: 224px){
+
+    .main div{
+        font-size: 8px;
+    }
+
+    .social-icons a{
+        padding-right: 6px;
+    }
+
+    .content{
+        font-size: 7px;
+    }
+
+}
+
+@media (max-width: 218px){
+
+    .project-card{
+        font-size: 1.3em;
+    }
+
+    .projects {
+        padding: 50px 0;
+    }
+
 }
